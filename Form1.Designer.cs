@@ -34,6 +34,9 @@
             this.moedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroMoeda = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarMoeda = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItemOperacao = new System.Windows.Forms.ToolStripMenuItem();
+            this.totaisToolStripMenuItemTotal = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonTransacao = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +45,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
-            this.moedaToolStripMenuItem});
+            this.moedaToolStripMenuItem,
+            this.relatoriosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -87,6 +91,29 @@
             this.atualizarMoeda.Text = "Atualizar";
             this.atualizarMoeda.Click += new System.EventHandler(this.atualizarMoeda_Click);
             // 
+            // relatoriosToolStripMenuItem
+            // 
+            this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clienteToolStripMenuItemOperacao,
+            this.totaisToolStripMenuItemTotal});
+            this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatoriosToolStripMenuItem.Text = "Relatorios";
+            // 
+            // clienteToolStripMenuItemOperacao
+            // 
+            this.clienteToolStripMenuItemOperacao.Name = "clienteToolStripMenuItemOperacao";
+            this.clienteToolStripMenuItemOperacao.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItemOperacao.Text = "Operaçoes";
+            this.clienteToolStripMenuItemOperacao.Click += new System.EventHandler(this.clienteToolStripMenuItemOperacao_Click);
+            // 
+            // totaisToolStripMenuItemTotal
+            // 
+            this.totaisToolStripMenuItemTotal.Name = "totaisToolStripMenuItemTotal";
+            this.totaisToolStripMenuItemTotal.Size = new System.Drawing.Size(180, 22);
+            this.totaisToolStripMenuItemTotal.Text = "Totais";
+            this.totaisToolStripMenuItemTotal.Click += new System.EventHandler(this.totaisToolStripMenuItemTotal_Click);
+            // 
             // buttonTransacao
             // 
             this.buttonTransacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,6 +151,9 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroMoeda;
         private System.Windows.Forms.ToolStripMenuItem atualizarMoeda;
         private System.Windows.Forms.Button buttonTransacao;
+        private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItemOperacao;
+        private System.Windows.Forms.ToolStripMenuItem totaisToolStripMenuItemTotal;
     }
 }
 

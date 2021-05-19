@@ -41,5 +41,15 @@ namespace GerenciadorDeCambio
             FormTransacao formTransacao = new FormTransacao();
             formTransacao.ShowDialog();
         }
+
+        private void clienteToolStripMenuItemOperacao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totaisToolStripMenuItemTotal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
