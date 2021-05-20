@@ -54,7 +54,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormRelatorio";
             this.Text = "FormRelatorio";
-            this.Load += new System.EventHandler(this.FormRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

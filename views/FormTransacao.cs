@@ -15,6 +15,10 @@ namespace GerenciadorDeCambio.views
 {
     public partial class FormTransacao : Form
     {
+        /// <summary>
+        /// inicializa o form e carea as informaçoes nos combobox com as informaçoes do banco
+        /// desabilita o botão salvar
+        /// </summary>
         public FormTransacao()
         {
             InitializeComponent();
@@ -22,7 +26,12 @@ namespace GerenciadorDeCambio.views
             buttonSalvar.Enabled = false;
         }
 
-
+        /// <summary>
+        /// faz a validacao dos valores digitados e exibe os valores totais taxa cobrada e total a pagar
+        /// e abilita o botan slavar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonProcessar_Click(object sender, EventArgs e)
         {
             string[] resposta;
@@ -33,7 +42,7 @@ namespace GerenciadorDeCambio.views
                 string valor = textBoxValor.Text;
                 valor = valor.Replace(".", ",");
                 string[] x = valor.Split(',');
-                if (x.Length >= 0)
+                if (x.Length >= 0 && x.Length < 3)
                 {
                     if (Regex.IsMatch(x[0], @"^[0-9]+$"))
                     {
@@ -89,7 +98,12 @@ namespace GerenciadorDeCambio.views
         }
 
     
-
+        /// <summary>
+        /// carega as informaçoes prossesada num  ojeto e envia para ser salvo no banco
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             if (comboBoxCliente.Text != "Selecione")
@@ -118,10 +132,12 @@ namespace GerenciadorDeCambio.views
             }
 
         }
+
+        /// <summary>
+        /// carega as informaçoes recebidas do baco nos menus
+        /// </summary>
         private void popularcombobox()
         {
-            comboBoxmoedaDestino.DataSource = null;
-            comboBoxmoedaDestino.DataSource = MoedaController.select();
             comboBoxMoedaOrigem.DataSource = null;
             comboBoxMoedaOrigem.DataSource = MoedaController.select();
             comboBoxCliente.DataSource = null;
@@ -129,7 +145,12 @@ namespace GerenciadorDeCambio.views
         }
 
         
-
+        /// <summary>
+        /// sempre que o campo do valor é modificado disabilita o botao salvar 
+        /// fazendo com que o operador prossese novamente antes de salvar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBoxValor_TextChanged(object sender, EventArgs e)
         {
             buttonSalvar.Enabled = false;

@@ -7,7 +7,7 @@
  
  Damp do banco de dados:
  
- "CREATE TABLE tbCliente (
+ CREATE TABLE tbCliente (
     id   INTEGER PRIMARY KEY AUTOINCREMENT
                  UNIQUE,
     nome VARCHAR NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE tbOberacao (
 );
 "
 
-Para iniciar o sistema tem que ser cadastrada Moedas e clientes 
+Ao iniciar o sistema tem que ser cadastrado Moedas e clientes 
 
 Depois pode ser cadastrado operaçoes.
 
@@ -45,5 +45,8 @@ Os relatorios são gerados por cliente e data, ou apenas por data
 
 Para cadastrar um cliente é nessesario um numero de cpf valido pois ele tem validaçao
 
-O banco de dados quarda os valores em varchar, por aver alguns arendondamentos se quardados em decimal.
+O banco de dados quarda os valores em varchar, por haver alguns arendondamentos se quardados em decimal.
+
+Acredito que esteja atendendo os requisitos 
+
 

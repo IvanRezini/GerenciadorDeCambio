@@ -19,6 +19,10 @@ namespace GerenciadorDeCambio.views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// au ser clicado o btn, é caregado um obj do tipo moeda
+        /// e enviado para validação se a reposta for real ele carega as informaçoes no banco
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             MoedaModel mdo = new MoedaModel();

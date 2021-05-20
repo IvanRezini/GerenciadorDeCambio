@@ -13,6 +13,11 @@ namespace GerenciadorDeCambio
 {
     public partial class formPrincipal : Form
     {
+
+        /// <summary>
+        /// cada menu chama seu form corespondente
+        /// e o btn chama seu form tambem
+        /// </summary>
         public formPrincipal()
         {
             InitializeComponent();

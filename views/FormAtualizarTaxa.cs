@@ -14,13 +14,19 @@ namespace GerenciadorDeCambio.views
 {
     public partial class FormAtualizarTaxa : Form
     {
+         /// <summary>
+         /// Inicializa o form, au inicialisar ele popula o menu combobox
+         /// </summary>
         public FormAtualizarTaxa()
         {
             InitializeComponent();
             this.popularcombobox();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Au clicar em salvar fiz uma validação para ver se os valores de digitados são numericos
+        /// e se sim salva a aleraçao e recarega o menu
+        /// </summary>
+        private void buttonSalvar_Click(object sender, EventArgs e)
         {
             if(textBox1.Text!= "")
             {
@@ -29,8 +35,9 @@ namespace GerenciadorDeCambio.views
                 string valor = textBox1.Text;
                 valor = valor.Replace(".", ",");
                 string[] x = valor.Split(',');
-                if (x.Length >= 0)
+                if (x.Length >= 0 && x.Length < 3) ///valida se foi digitado e se tem apenas uma virgula
                 {
+                    MessageBox.Show(x.Length.ToString());
                     if (Regex.IsMatch(x[0], @"^[0-9]+$"))
                     {
                         if (x.Length > 1)
@@ -70,10 +77,15 @@ namespace GerenciadorDeCambio.views
                 MessageBox.Show("Digite nova taxa" + "\n");
             }
         }
+        /// <summary>
+        /// Faz o caregamento do menu com as iformaçoes do banco
+        /// </summary>
         private void popularcombobox()
         {
             comboBox1.DataSource = null;
            comboBox1.DataSource = MoedaController.select();
         }
+
+      
     }
 }

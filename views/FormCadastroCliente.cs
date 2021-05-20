@@ -14,6 +14,10 @@ namespace GerenciadorDeCambio.views
 {
     public partial class FormCadastroCliente : Form
     {
+        /// <summary>
+        /// carega o formulario no carregamento 
+        /// ele carega o campo data com a data atual
+        /// </summary>
         public FormCadastroCliente()
         {
             InitializeComponent();
@@ -21,6 +25,11 @@ namespace GerenciadorDeCambio.views
             textBoxData.Text = data;
         }
 
+        /// <summary>
+        /// quando clica no btn salvar inicializado um objeto novo do tipo clientModel
+        /// esse cliet e mandado para o ControllerClient para fazer validação
+        /// recebe de volta a resposta e exibi.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             ClientModel cli = new ClientModel();
