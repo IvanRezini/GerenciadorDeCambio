@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace GerenciadorDeCambio.Model
 {
+    /// <summary>
+    /// cria um objeto de modelo 
+    /// com gets e sets
+    /// </summary>
     class ClientModel
     {
         private Int32 id;

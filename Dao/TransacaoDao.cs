@@ -11,6 +11,10 @@ namespace GerenciadorDeCambio.Dao
 {
     class TransacaoDao:Conexao 
     {
+        /// <summary>
+        /// salva no banco de dados as transaçoes feitas 
+        /// recebe um objeto do tipo TransacaoModel
+        /// </summary>
         public static void insert(TransacaoModel tra)
         {
             SQLiteDataAdapter da = null;

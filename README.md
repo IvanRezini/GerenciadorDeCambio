@@ -1,6 +1,7 @@
 # GerenciadorDeCambio
  Usei banco de dados Sqlite
  O caminho do banco é: "\GerenciadorDeCambio\bin\Debug\Banco"
+ Nome do banco de dados "banco"
  Damp do banco de dados:
  
  "CREATE TABLE tbCliente (
@@ -32,11 +33,9 @@ CREATE TABLE tbOberacao (
                             NOT NULL
 );
 "
-SELECT tbOberacao.id, tbOberacao.dataOperacao,tbOberacao.valorOriginal,tbOberacao.valorConvertido, tbCliente.nome, tbOberacao.taxaCobrada, rt.nome as origem, sr.nome as destino
-                                      FROM tbOberacao INNER JOIN tbCliente
-                                      ON tbOberacao.idCliente = tbCliente.id
-                                      INNER JOIN tbMoeda as rt
-                                      ON tbOberacao.moedaOrigem = rt.id 
-                                      INNER JOIN tbMoeda as sr
-                                      ON tbOberacao.moedaDestino = sr.id 
-                                      ORDER BY data DESC
+Para iniciar o sistema tem que ser cadastrada Moedas e clientes 
+Depois pode ser cadastrado operaçoes.
+Os relatorios são gerados por cliente e data, ou apenas por data
+Para cadastrar um cliente é nessesario um numero de cpf valido pois ele tem validaçao
+O banco de dados quarda os valores em varchar, por aver alguns arendondamentos se quardados em decimal.
+

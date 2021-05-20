@@ -11,6 +11,10 @@ namespace GerenciadorDeCambio.Controller
 {
     class RelatorioController
     {
+        /// <summary>
+        /// recebe os parametros para executar o selec no banco dedados
+        /// Retorna um dataTable com o relatorio para preencher o relatorio
+        /// </summary>
         public static DataTable relatorio(string id, string dataInicio, string dataFim)
         {
             decimal totalConvertido = 0;
@@ -54,7 +58,7 @@ namespace GerenciadorDeCambio.Controller
                 totalConvertido += (decimal.Parse(pro[5]) * 10);
                 dataTable.Rows.Add(pro);
             }
-
+            //adiciona o resultado
             pro[0] = "";
             pro[1] = "";
             pro[2] = "Total convertido em R$";

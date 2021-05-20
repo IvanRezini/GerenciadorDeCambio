@@ -9,6 +9,11 @@ namespace GerenciadorDeCambio.Dao
 
     class MoedaDao : Conexao
     {
+        /// <summary>
+        /// cria uma lista das moedas cadastradas por ordem alfabetica
+        /// retorna um DataTable
+        /// </summary>
+        /// <returns></returns>
         public static DataTable ListaMoedas()
         {
             SQLiteDataAdapter da = null;
@@ -30,7 +35,11 @@ namespace GerenciadorDeCambio.Dao
                 throw ex;
             }
         }
-
+        
+        /// <summary>
+        /// Faz a inserção de uma nova moeda
+        /// recebe um objeto do tipo MoedaModel
+        /// </summary>
         public static void insert(MoedaModel moeda)
         {
             SQLiteDataAdapter da = null;
@@ -53,6 +62,11 @@ namespace GerenciadorDeCambio.Dao
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Faz a alteração do valor de uma moeda
+        /// recebe o id da moeda e o novo valor
+        /// </summary>
         public static void update(string id, string valor)
         {
             SQLiteDataAdapter da = null;

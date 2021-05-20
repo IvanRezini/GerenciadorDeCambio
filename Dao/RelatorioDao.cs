@@ -10,6 +10,13 @@ namespace GerenciadorDeCambio.Dao
 {
     class RelatorioDao :Conexao
     {
+        /// <summary>
+        /// Faz um select no banco de dados com INNER JOIN  nas duas tabelas 
+        /// recebe como parametro o id do cliente
+        /// data de inicio e fim para filtra 
+        /// retorna um DataTable com o resultado
+        /// </summary>
+        /// 
         public static DataTable relatorio(int id, string dataInicio, string dataFinal)
         {
             SQLiteDataAdapter da = null;
@@ -40,6 +47,12 @@ namespace GerenciadorDeCambio.Dao
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Faz um select no banco de dados com INNER JOIN  nas duas tabelas 
+        /// recebe como parametro data de inicio e fim para filtra apenas por data
+        /// retorna um DataTable com o resultado
+        /// </summary>
         public static DataTable relatorioPeriodo( string dataInicio, string dataFinal)
         {
             SQLiteDataAdapter da = null;

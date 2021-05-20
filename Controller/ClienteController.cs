@@ -11,6 +11,11 @@ namespace GerenciadorDeCambio.Controller
 {
     class ClienteController
     {
+        /// <summary>
+        /// Prepara o client para ser salvo no banco de dados
+        /// recebe um objeto do tipo client
+        /// return uma respostade validação
+        /// </summary>
         public static string salvar(ClientModel cli)
         {
             string resposta = "";
@@ -27,11 +32,12 @@ namespace GerenciadorDeCambio.Controller
 
             if (cli.Nome != "")
             {
-                if (cli.Cpf!="")
+                if (IsValidCpf(cli.Cpf))
                 {
+                    
                     if (cli.Data != "")
                     {
-                        ClienteDao.insert(cli);//insere um novo client
+                        ClienteDao.insert(cli);//insere um novo cliente
                     }
                     else
                     {
@@ -40,7 +46,7 @@ namespace GerenciadorDeCambio.Controller
                 }
                 else
                 {
-                    resposta = "Cpf invaido";
+                    resposta = "Cpf invalido";
                 }
             }
             else
@@ -49,7 +55,10 @@ namespace GerenciadorDeCambio.Controller
             }
             return resposta;
         }
-
+        /// <summary>
+        /// faz um select no banco de dados e cria um array para preencher os combobox
+        /// </summary>
+        
         public static string[] select()
         {
 
@@ -71,7 +80,7 @@ namespace GerenciadorDeCambio.Controller
 
 
 
-        /// vaidar cpf
+        /// Faz a validação de cpf
         public static bool IsValidCpf(string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };

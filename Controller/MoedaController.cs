@@ -11,6 +11,11 @@ namespace GerenciadorDeCambio.Controller
 {
     class MoedaController
     {
+        /// <summary>
+        /// Faz a iserção de uma moeda no banco 
+        /// recebe um objeto d tipo moeda
+        /// 
+        /// </summary>
         public static string salvar(MoedaModel mdo)
         {
             MoedaDao.insert(mdo);
@@ -18,6 +23,11 @@ namespace GerenciadorDeCambio.Controller
             return "";
         }
 
+        /// <summary>
+        /// lista as moedas do banco monta um array para popular os combobox 
+        /// onde são usadas
+        /// </summary>
+        /// <returns></returns>
         public static string[] select()
         {
             
@@ -36,6 +46,10 @@ namespace GerenciadorDeCambio.Controller
 
             return moeda;
         }
+
+        /// <summary>
+        /// faz a alteraçao de valores das moedas
+        /// </summary>
         public static void atualisar(string id, string valor)
         {
             MoedaDao.update(id, valor);

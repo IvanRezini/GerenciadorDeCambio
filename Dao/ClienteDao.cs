@@ -12,6 +12,10 @@ namespace GerenciadorDeCambio.Dao
 {
     class ClienteDao : Conexao
     {
+        /// <summary>
+        /// faz um select no banco de dados ordenados pelo nome
+        /// retorna um dataTale com o select
+        /// </summary>
         public static DataTable ListaClientes()
         {
             SQLiteDataAdapter da = null;
@@ -34,6 +38,10 @@ namespace GerenciadorDeCambio.Dao
             }
         }
 
+        /// <summary>
+        /// faz a insrçao de um novo cliente
+        /// recebe um objeto do tipo clientModel
+        /// </summary>
         public static void insert(ClientModel cliente)
         {
             SQLiteDataAdapter da = null;

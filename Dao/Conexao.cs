@@ -10,6 +10,11 @@ namespace GerenciadorDeCambio.Dao
 {
     class Conexao
     {
+        /// <summary>
+        /// cria um objeto do tipo conexao 
+        /// busca o caminho do banco e criaessa conexao
+        /// as classes que fazem conexao com o banco são extendidas a partir dessa
+        /// </summary>
         private static SQLiteConnection conexao;
 
         public static string caminho = System.Environment.CurrentDirectory;//lista o caminho do executavel
