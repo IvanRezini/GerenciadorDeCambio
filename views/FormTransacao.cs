@@ -140,6 +140,8 @@ namespace GerenciadorDeCambio.views
         {
             comboBoxMoedaOrigem.DataSource = null;
             comboBoxMoedaOrigem.DataSource = MoedaController.select();
+            comboBoxmoedaDestino.DataSource = null;
+            comboBoxmoedaDestino.DataSource = MoedaController.select();
             comboBoxCliente.DataSource = null;
             comboBoxCliente.DataSource = ClienteController.select();
         }
