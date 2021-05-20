@@ -72,6 +72,7 @@
     <Compile Include="Dao\ClienteDao.cs" />
     <Compile Include="Dao\Conexao.cs" />
     <Compile Include="Dao\MoedaDao.cs" />
+    <Compile Include="Dao\RelatorioDao.cs" />
     <Compile Include="Dao\TransacaoDao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -102,6 +103,18 @@
     <Compile Include="views\FormCadastroMoeda.Designer.cs">
       <DependentUpon>FormCadastroMoeda.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\FormRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormRelatorio.Designer.cs">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\FormGerarRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\FormGerarRelatorio.Designer.cs">
+      <DependentUpon>FormGerarRelatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\FormTransacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +141,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\FormCadastroMoeda.resx">
       <DependentUpon>FormCadastroMoeda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FormGerarRelatorio.resx">
+      <DependentUpon>FormGerarRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\FormRelatorio.resx">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\FormTransacao.resx">
       <DependentUpon>FormTransacao.cs</DependentUpon>

@@ -55,9 +55,9 @@ namespace GerenciadorDeCambio.Controller
 
             DataTable dt = new DataTable();
             dt = ClienteDao.ListaClientes();
-            string[] cliente = new string[dt.Rows.Count];
-
-            int i = 0;
+            string[] cliente = new string[(dt.Rows.Count)+1];
+            cliente[0] = "Selecione";
+            int i = 1;
             foreach (DataRow linha in dt.Rows)
             {
                 cliente[i] = linha["id"].ToString() + " - " + linha["nome"].ToString();

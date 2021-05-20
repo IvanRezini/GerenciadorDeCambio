@@ -92,24 +92,30 @@ namespace GerenciadorDeCambio.views
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            TransacaoModel tra = new TransacaoModel();
+            if (comboBoxCliente.Text != "Selecione")
+            {
+                TransacaoModel tra = new TransacaoModel();
 
-            string[] aux = comboBoxCliente.Text.Split('-');
-            tra.IdClient = Int32.Parse(aux[0].Trim());
-            aux=comboBoxMoedaOrigem.Text.Split('-');
-            tra.IdMoedaOrigem= Int32.Parse(aux[0].Trim());
-            aux = comboBoxmoedaDestino.Text.Split('-');
-            tra.IdMoedaDestino = Int32.Parse(aux[0].Trim());
-            tra.ValorOriginal = textBoxValor.Text;
-            aux = labelTotal.Text.Split(' ');
-            tra.ValorConvertido = aux[0];
-            aux =labelTaxa.Text.Split(' ');
-            tra.TaxaCobrada = aux[0];
-            tra.Data = DateTime.Now.ToString("yyyy-MM-dd");
+                string[] aux = comboBoxCliente.Text.Split('-');
+                tra.IdClient = Int32.Parse(aux[0].Trim());
+                aux = comboBoxMoedaOrigem.Text.Split('-');
+                tra.IdMoedaOrigem = Int32.Parse(aux[0].Trim());
+                aux = comboBoxmoedaDestino.Text.Split('-');
+                tra.IdMoedaDestino = Int32.Parse(aux[0].Trim());
+                tra.ValorOriginal = textBoxValor.Text;
+                aux = labelTotal.Text.Split(' ');
+                tra.ValorConvertido = aux[0];
+                aux = labelTaxa.Text.Split(' ');
+                tra.TaxaCobrada = aux[0];
+                tra.Data = DateTime.Now.ToString("yyyy-MM-dd");
 
 
-            TransacaoController.salvar(tra);
-
+                TransacaoController.salvar(tra);
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente" + "\n");
+            }
 
         }
         private void popularcombobox()

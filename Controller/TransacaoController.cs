@@ -21,9 +21,9 @@ namespace GerenciadorDeCambio.Controller
            
             
             
-            resposta[0] = total.ToString();
-            resposta[1]= ((Decimal.Parse(valor) / Decimal.Parse(or[2]))/10).ToString();
-            resposta[2] = ((((Decimal.Parse(valor) / Decimal.Parse(or[2])) / 10) * 9) * (Decimal.Parse(ds[2]))).ToString();
+            resposta[0] = total.ToString("N2");
+            resposta[1]= ((Decimal.Parse(valor) / Decimal.Parse(or[2]))/10).ToString("N2");
+            resposta[2] = ((((Decimal.Parse(valor) / Decimal.Parse(or[2])) / 10) * 9) * (Decimal.Parse(ds[2]))).ToString("N2");
 
             return resposta;
         }

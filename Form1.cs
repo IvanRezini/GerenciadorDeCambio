@@ -44,7 +44,8 @@ namespace GerenciadorDeCambio
 
         private void clienteToolStripMenuItemOperacao_Click(object sender, EventArgs e)
         {
-
+            FormGerarRelatorio formRelatorio = new FormGerarRelatorio();
+            formRelatorio.ShowDialog();
         }
 
         private void totaisToolStripMenuItemTotal_Click(object sender, EventArgs e)
