@@ -1,4 +1,5 @@
-﻿using GerenciadorDeCambio.Dao;
+﻿using GerenciadorDeCambio.Controller;
+using GerenciadorDeCambio.Dao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,36 +21,13 @@ namespace GerenciadorDeCambio.views
         }
         private void populardataGridView(string id, string dataInicio, string dataFim)
         {
-            if (id != "")
-            {
-                string[] aux = id.Split('-');
-                int cod = Int32.Parse(aux[0].Trim());
+                dataGridView1.DataSource = RelatorioController.relatorio(id, dataInicio, dataFim);
 
-                dataGridView1.DataSource = RelatorioDao.relatorio(cod, dataInicio, dataFim);
-                dataGridView1.AutoResizeColumn(0);
-                dataGridView1.AutoResizeColumn(1);
-                dataGridView1.AutoResizeColumn(2);
-                dataGridView1.AutoResizeColumn(3);
-                dataGridView1.AutoResizeColumn(4);
-                dataGridView1.AutoResizeColumn(5);
-                dataGridView1.AutoResizeColumn(6);
-                dataGridView1.AutoResizeColumn(7);
+                dataGridView1.AutoResizeColumns();
+                dataGridView1.AutoResizeRows();;
                 dataGridView1.ClearSelection();
-            }
-            else
-            {
-                dataGridView1.DataSource = RelatorioDao.relatorioPeriodo(dataInicio, dataFim);
-                dataGridView1.AutoResizeColumn(0);
-                dataGridView1.AutoResizeColumn(1);
-                dataGridView1.AutoResizeColumn(2);
-                dataGridView1.AutoResizeColumn(3);
-                dataGridView1.AutoResizeColumn(4);
-                dataGridView1.AutoResizeColumn(5);
-                dataGridView1.AutoResizeColumn(6);
-                dataGridView1.AutoResizeColumn(7);
-                dataGridView1.ClearSelection();
-
-            }
+            
+            
         }
 
         private void FormRelatorio_Load(object sender, EventArgs e)

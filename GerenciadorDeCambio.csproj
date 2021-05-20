@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\MoedaController.cs" />
+    <Compile Include="Controller\RelatorioController.cs" />
     <Compile Include="Controller\TransacaoController.cs" />
     <Compile Include="Dao\ClienteDao.cs" />
     <Compile Include="Dao\Conexao.cs" />
