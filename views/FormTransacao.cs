@@ -125,6 +125,7 @@ namespace GerenciadorDeCambio.views
 
 
                 TransacaoController.salvar(tra);
+                buttonSalvar.Enabled = false;
             }
             else
             {

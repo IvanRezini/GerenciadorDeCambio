@@ -37,7 +37,6 @@ namespace GerenciadorDeCambio.views
                 string[] x = valor.Split(',');
                 if (x.Length >= 0 && x.Length < 3) ///valida se foi digitado e se tem apenas uma virgula
                 {
-                    MessageBox.Show(x.Length.ToString());
                     if (Regex.IsMatch(x[0], @"^[0-9]+$"))
                     {
                         if (x.Length > 1)
@@ -69,8 +68,6 @@ namespace GerenciadorDeCambio.views
                     MessageBox.Show("Valor invalido" + "\n");
                 }
 
-
-                Console.WriteLine(id[0]+"\n\n\n");
             }
             else
             {

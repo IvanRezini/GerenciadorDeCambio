@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace GerenciadorDeCambio.Controller
@@ -18,9 +19,42 @@ namespace GerenciadorDeCambio.Controller
         /// </summary>
         public static string salvar(MoedaModel mdo)
         {
-            MoedaDao.insert(mdo);
+            string resposta = "";
+            string valor = mdo.Taxa;
+            valor = valor.Replace(".", ",");
+            string[] x = valor.Split(',');
+            if (x.Length >= 0 && x.Length < 3) ///valida se foi digitado e se tem apenas uma virgula
+            {
+                if (Regex.IsMatch(x[0], @"^[0-9]+$"))
+                {
+                    if (x.Length > 1)
+                    {
+                        if (Regex.IsMatch(x[1], @"^[0-9]+$"))
+                        {
+                            MoedaDao.insert(mdo);
+                        }
+                        else
+                        {
+                            resposta = "Valor invalido";
+                        }
+                    }
+                    else
+                    {
+                        MoedaDao.insert(mdo);
 
-            return "";
+                    }
+                }
+                else
+                {
+                    resposta = "Valor invalido";
+                }
+
+            }
+            else
+            {
+                resposta = "Valor invalido";
+            }
+            return resposta;
         }
 
         /// <summary>

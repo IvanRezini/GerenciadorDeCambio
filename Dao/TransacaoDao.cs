@@ -29,7 +29,7 @@ namespace GerenciadorDeCambio.Dao
                 da = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 cmd.ExecuteNonQueryAsync();
                 vcon.Close();
-                MessageBox.Show("Cadastro efetuado co socesso" + "\n");
+                MessageBox.Show("Salvo" + "\n");
             }
             catch (Exception ex)
             {
