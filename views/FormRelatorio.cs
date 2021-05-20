@@ -20,19 +20,36 @@ namespace GerenciadorDeCambio.views
         }
         private void populardataGridView(string id, string dataInicio, string dataFim)
         {
-            string[] aux = id.Split('-');
-            int cod = Int32.Parse(aux[0].Trim());
+            if (id != "")
+            {
+                string[] aux = id.Split('-');
+                int cod = Int32.Parse(aux[0].Trim());
 
-            dataGridView1.DataSource = RelatorioDao.relatorio(cod, dataInicio, dataFim);
-            dataGridView1.AutoResizeColumn(0);
-            dataGridView1.AutoResizeColumn(1);
-            dataGridView1.AutoResizeColumn(2);
-            dataGridView1.AutoResizeColumn(3);
-            dataGridView1.AutoResizeColumn(4);
-            dataGridView1.AutoResizeColumn(5);
-            dataGridView1.AutoResizeColumn(6);
-            dataGridView1.AutoResizeColumn(7);
-            dataGridView1.ClearSelection();
+                dataGridView1.DataSource = RelatorioDao.relatorio(cod, dataInicio, dataFim);
+                dataGridView1.AutoResizeColumn(0);
+                dataGridView1.AutoResizeColumn(1);
+                dataGridView1.AutoResizeColumn(2);
+                dataGridView1.AutoResizeColumn(3);
+                dataGridView1.AutoResizeColumn(4);
+                dataGridView1.AutoResizeColumn(5);
+                dataGridView1.AutoResizeColumn(6);
+                dataGridView1.AutoResizeColumn(7);
+                dataGridView1.ClearSelection();
+            }
+            else
+            {
+                dataGridView1.DataSource = RelatorioDao.relatorioPeriodo(dataInicio, dataFim);
+                dataGridView1.AutoResizeColumn(0);
+                dataGridView1.AutoResizeColumn(1);
+                dataGridView1.AutoResizeColumn(2);
+                dataGridView1.AutoResizeColumn(3);
+                dataGridView1.AutoResizeColumn(4);
+                dataGridView1.AutoResizeColumn(5);
+                dataGridView1.AutoResizeColumn(6);
+                dataGridView1.AutoResizeColumn(7);
+                dataGridView1.ClearSelection();
+
+            }
         }
 
         private void FormRelatorio_Load(object sender, EventArgs e)

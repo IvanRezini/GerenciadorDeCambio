@@ -39,5 +39,6 @@ namespace GerenciadorDeCambio.views
                 MessageBox.Show("Selecione um cliente" + "\n");
             }
         }
+
     }
 }

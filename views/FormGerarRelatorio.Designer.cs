@@ -106,7 +106,7 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "DE ";
             // 
-            // FormRelatorio
+            // FormGerarRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,7 +118,7 @@
             this.Controls.Add(this.buttonGerar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxCliente);
-            this.Name = "FormRelatorio";
+            this.Name = "FormGerarRelatorio";
             this.Text = "FormRelatorio";
             this.ResumeLayout(false);
             this.PerformLayout();

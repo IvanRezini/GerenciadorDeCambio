@@ -35,8 +35,8 @@
             this.cadastroMoeda = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarMoeda = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItemOperacao = new System.Windows.Forms.ToolStripMenuItem();
-            this.totaisToolStripMenuItemTotal = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItemPorClient = new System.Windows.Forms.ToolStripMenuItem();
+            this.totaisToolStripMenuItemPeriodo = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonTransacao = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -94,25 +94,25 @@
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItemOperacao,
-            this.totaisToolStripMenuItemTotal});
+            this.clienteToolStripMenuItemPorClient,
+            this.totaisToolStripMenuItemPeriodo});
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relatoriosToolStripMenuItem.Text = "Relatorios";
             // 
-            // clienteToolStripMenuItemOperacao
+            // clienteToolStripMenuItemPorClient
             // 
-            this.clienteToolStripMenuItemOperacao.Name = "clienteToolStripMenuItemOperacao";
-            this.clienteToolStripMenuItemOperacao.Size = new System.Drawing.Size(180, 22);
-            this.clienteToolStripMenuItemOperacao.Text = "Operaçoes";
-            this.clienteToolStripMenuItemOperacao.Click += new System.EventHandler(this.clienteToolStripMenuItemOperacao_Click);
+            this.clienteToolStripMenuItemPorClient.Name = "clienteToolStripMenuItemPorClient";
+            this.clienteToolStripMenuItemPorClient.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItemPorClient.Text = "Por Cliente";
+            this.clienteToolStripMenuItemPorClient.Click += new System.EventHandler(this.clienteToolStripMenuItemOperacao_Click);
             // 
-            // totaisToolStripMenuItemTotal
+            // totaisToolStripMenuItemPeriodo
             // 
-            this.totaisToolStripMenuItemTotal.Name = "totaisToolStripMenuItemTotal";
-            this.totaisToolStripMenuItemTotal.Size = new System.Drawing.Size(180, 22);
-            this.totaisToolStripMenuItemTotal.Text = "Totais";
-            this.totaisToolStripMenuItemTotal.Click += new System.EventHandler(this.totaisToolStripMenuItemTotal_Click);
+            this.totaisToolStripMenuItemPeriodo.Name = "totaisToolStripMenuItemPeriodo";
+            this.totaisToolStripMenuItemPeriodo.Size = new System.Drawing.Size(180, 22);
+            this.totaisToolStripMenuItemPeriodo.Text = "Por periodo";
+            this.totaisToolStripMenuItemPeriodo.Click += new System.EventHandler(this.totaisToolStripMenuItemTotal_Click);
             // 
             // buttonTransacao
             // 
@@ -152,8 +152,8 @@
         private System.Windows.Forms.ToolStripMenuItem atualizarMoeda;
         private System.Windows.Forms.Button buttonTransacao;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItemOperacao;
-        private System.Windows.Forms.ToolStripMenuItem totaisToolStripMenuItemTotal;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItemPorClient;
+        private System.Windows.Forms.ToolStripMenuItem totaisToolStripMenuItemPeriodo;
     }
 }
 

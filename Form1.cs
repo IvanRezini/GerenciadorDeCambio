@@ -50,7 +50,8 @@ namespace GerenciadorDeCambio
 
         private void totaisToolStripMenuItemTotal_Click(object sender, EventArgs e)
         {
-
+            FormRelatorioPeriodo formRelatorioPeriodo = new FormRelatorioPeriodo();
+            formRelatorioPeriodo.ShowDialog();
         }
     }
 }
